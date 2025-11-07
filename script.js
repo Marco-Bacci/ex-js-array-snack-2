@@ -51,16 +51,10 @@ const books = [
 // Creare un array (longBooksTitles) che contiene solo i titoli dei libri contenuti in longBooks.
 // Stampa in console ogni titolo nella console.
 
-const longBooks = books.filter((b) => {
-  return b.pages > 300;
-});
+const longBooks = books.filter((b) => b.pages > 300);
 console.log(longBooks);
 
-const longBooksTitles = longBooks.map((b) => {
-  return b.title;
-});
+const longBooksTitles = longBooks.map((b) => b.title);
 console.log(longBooksTitles);
 
-longBooksTitles.forEach((b) => {
-  console.log(b);
-});
+longBooksTitles.forEach((b) => console.log(b));
