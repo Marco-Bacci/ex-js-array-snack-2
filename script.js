@@ -66,9 +66,11 @@ const books = [
 // Salva in una variabile (fullPricedBook) il primo elemento di discountedBooks che ha un prezzo intero (senza centesimi)
 
 const availableBooks = books.filter((b)=> b.available)
-console.log(availableBooks)
+// console.log(availableBooks)
 
-const discountedBooks = availableBooks.map((books)=>{
-
+const discountedBooks = availableBooks.map((book)=>{
+const priceInNumber = parseFloat(book.price) * 0.8
+const price = priceInNumber.toFixed(2) + "€"
+return {...book, price}
 })
 console.log(discountedBooks)
