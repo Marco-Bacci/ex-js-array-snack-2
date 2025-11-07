@@ -51,13 +51,13 @@ const books = [
 // Creare un array (longBooksTitles) che contiene solo i titoli dei libri contenuti in longBooks.
 // Stampa in console ogni titolo nella console.
 
-const longBooks = books.filter((b) => b.pages > 300);
-console.log(longBooks);
+// const longBooks = books.filter((b) => b.pages > 300);
+// console.log(longBooks);
 
-const longBooksTitles = longBooks.map((b) => b.title);
-console.log(longBooksTitles);
+// const longBooksTitles = longBooks.map((b) => b.title);
+// console.log(longBooksTitles);
 
-longBooksTitles.forEach((b) => console.log(b));
+// longBooksTitles.forEach((b) => console.log(b));
 
 
 // Snack 2 - Il primo libro scontato
@@ -65,5 +65,10 @@ longBooksTitles.forEach((b) => console.log(b));
 // Crea un array (discountedBooks) con gli availableBooks, ciascuno con il prezzo scontato del 20% (mantieni lo stesso formato e arrotonda al centesimo)
 // Salva in una variabile (fullPricedBook) il primo elemento di discountedBooks che ha un prezzo intero (senza centesimi)
 
-const availableBooks = books.filter((b)=> b.available = true)
+const availableBooks = books.filter((b)=> b.available)
 console.log(availableBooks)
+
+const discountedBooks = availableBooks.map((books)=>{
+
+})
+console.log(discountedBooks)
