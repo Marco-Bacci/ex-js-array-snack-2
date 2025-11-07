@@ -74,3 +74,9 @@ const price = priceInNumber.toFixed(2) + "€"
 return {...book, price}
 })
 console.log(discountedBooks)
+
+const fullPricedBook = discountedBooks.find((book)=>{
+  const price = parseFloat(book.price) 
+  return price % 1 === 0
+})
+console.log(fullPricedBook)
