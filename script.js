@@ -90,10 +90,16 @@ const books = [
 // Ordina l’array authors in base all’età, senza creare un nuovo array.
 // (se areAuthorsAdult è true, ordina in ordine crescente, altrimenti in ordine decrescente)
 
+const authors = books.map((a) => a.author);
+console.log(authors);
 
-const authors = books.map((a)=> a.author)
-console.log(authors)
+const areAuthorsAdults = authors.every((a) => a.age >= 18);
+console.log(areAuthorsAdults);
 
-const areAuthorsAdults = authors.every((a)=> a.age >= 18)
-console.log(areAuthorsAdults)
-
+authors.sort((a, b) => {
+  if (areAuthorsAdults) {
+    return a.age - b.age;
+  } else {
+    return b.age - a.age;
+  }
+});
