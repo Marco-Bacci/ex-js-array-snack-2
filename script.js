@@ -90,16 +90,28 @@ const books = [
 // Ordina l’array authors in base all’età, senza creare un nuovo array.
 // (se areAuthorsAdult è true, ordina in ordine crescente, altrimenti in ordine decrescente)
 
-const authors = books.map((a) => a.author);
-console.log(authors);
+// const authors = books.map((a) => a.author);
+// console.log(authors);
 
-const areAuthorsAdults = authors.every((a) => a.age >= 18);
-console.log(areAuthorsAdults);
+// const areAuthorsAdults = authors.every((a) => a.age >= 18);
+// console.log(areAuthorsAdults);
 
-authors.sort((a, b) => {
-  if (areAuthorsAdults) {
-    return a.age - b.age;
-  } else {
-    return b.age - a.age;
-  }
-});
+// authors.sort((a, b) => {
+//   if (areAuthorsAdults) {
+//     return a.age - b.age;
+//   } else {
+//     return b.age - a.age;
+//   }
+// });
+
+// Creare un array (ages) che contiene le età degli autori dei libri.
+// Calcola la somma delle età (agesSum) usando reduce.
+// Stampa in console l’età media degli autori dei libri.
+
+const ages = books.map((a) => a.author.age);
+
+const agesSum = ages.reduce((acc, a) => {
+  return acc + a;
+}, 0);
+
+console.log(agesSum)
