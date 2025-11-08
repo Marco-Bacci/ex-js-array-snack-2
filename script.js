@@ -115,3 +115,6 @@ const agesSum = ages.reduce((acc, a) => {
 }, 0);
 
 console.log(agesSum)
+
+const media = agesSum / ages.length
+console.log(media)
